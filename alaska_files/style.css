@@ -1,0 +1,104 @@
+/*
+* {
+    box-sizing: border-box;
+  }
+  */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Style the header */
+
+.header {
+    background-color: #DDD;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin: 0 auto;
+}
+
+
+/* Style the footer */
+
+.footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 60%;
+    align-self: center;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    font-size: 1.0rem;
+    text-align: center;
+}
+
+.prison-details-grid {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.grid-details-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.grid-item-name {
+    border: 1px solid black;
+    text-align: right;
+    padding-right: 0.2em;
+}
+
+.grid-item-value {
+    border: 1px solid black;
+    text-align: left;
+    padding-left: 0.2em;
+}
+
+.list-of-prisons {
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+    background-color: cornflowerblue;
+}
+
+.prison-card {
+    background-color: lightgray;
+    padding-left: 10px;
+}
+
+.advert {
+    margin: 0 auto;
+    width: 50%;
+    height: 100px;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.search_label {
+    color: white;
+    font-size: small;
+}
+
+.search_text_input {
+    font-size: small;
+    width: 20.0rem;
+}
