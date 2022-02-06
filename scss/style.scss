@@ -1,0 +1,318 @@
+// old style file
+/*
+* {
+    box-sizing: border-box;
+  }
+  */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+
+.header {
+    background-color: #ddd;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin: 0 auto;
+}
+
+/* Style the footer */
+
+.footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196f3;
+    padding: 10px;
+    width: 100%;
+    align-self: center;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.prison-details-grid {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.grid-details-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.grid-item-name {
+    border: 1px solid black;
+    text-align: right;
+    padding-right: 0.2em;
+}
+
+.grid-item-value {
+    border: 1px solid black;
+    text-align: left;
+    padding-left: 0.2em;
+}
+
+// .list-of-prisons {
+//     border: 1px solid black;
+//     margin: 0 auto;
+//     width: 60%;
+//     height: 100%;
+//     background-color: cornflowerblue;
+// }
+
+.prison-card {
+    background-color: lightgray;
+    padding-left: 10px;
+}
+
+.advert {
+    margin: 0 auto;
+    width: 50%;
+    height: 100px;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.search_label {
+    color: white;
+    font-size: small;
+}
+
+.search_text_input {
+    font-size: small;
+    // width: 20rem;
+}
+
+// new updated style
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+
+$primary: #f49636;
+$secoundary: #1d1d1b;
+
+
+
+
+$containerWidth: (
+    576: 540px,
+    768: 720px,
+    992: 960px,
+    1200: 1140px,
+    1400: 1320px,
+);
+
+// mixing
+@mixin resp($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin padY($t, $b) {
+    padding-top: $t;
+    padding-bottom: $b;
+}
+
+@mixin mCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// common style
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    @include mCenter();
+    @include resp($sm) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @each $screen, $maxWidth in $containerWidth {
+        @include resp($screen + "px") {
+            max-width: $maxWidth;
+        }
+    }
+}
+
+// page style
+.header {
+    @include padY(15px, 25px);
+    background-color: #f3f3f3;
+    @include resp($lg) {
+        @include padY(20px, 28px);
+    }
+    img {
+        width: 165px;
+        @include resp($md) {
+            width: 135px;
+        }
+        @include resp($lg) {
+            width: 145px;
+        }
+        @include resp($xxl) {
+            width: 165px;
+        }
+    }
+
+    .container {
+        @include resp($md) {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        & > div {
+            margin-top: 20px;
+            @include resp($md) {
+                margin-top: 0px;
+            }
+            @include resp($lg) {
+                width: 55%;
+            }
+            @include resp($xl) {
+                width: 50%;
+            }
+            // inside form
+            #search {
+                form {
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
+                    @include resp($sm) {
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                    }
+                    label {
+                        font-weight: 600;
+                        color: black;
+                        font-size: 1.5rem;
+                        margin-bottom: 5px;
+                        @include resp($sm) {
+                            margin-bottom: 0px;
+                            font-size: 1rem;
+                        }
+                    }
+                    // input
+                    input[type="search"] {
+                        padding: 10px 12px;
+                        border-radius: 4px;
+                        border: 1px solid #7a7a7a8a;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        font-size: 0.85rem;
+                        @include resp($sm) {
+                            // width: initial;
+                            margin: 0px 10px 0px 10px;
+                        }
+                        &::placeholder {
+                            font-size: 0.85rem;
+                            @include resp($xl) {
+                                font-size: 1rem;
+                            }
+                        }
+                        @include resp($xl) {
+                            padding: 12px 15px;
+                        }
+                        @include resp($xxl) {
+                            margin: 0px 15px 0px 15px;
+                        }
+                    }
+                    input[type="submit"] {
+                        font-size: 1rem;
+                        display: inline-block;
+                        padding: 7px 12px;
+                        cursor: pointer;
+                        &:hover {
+                            color: white;
+                            background-color: black;
+                            border-color: transparent;
+                        }
+                        @include resp($xl) {
+                            padding: 10px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// title style 
+#section_state_details {
+  
+}
+
+
+
+// card style list
+
+.list-of-prisons {
+    @extend .container;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+    @include resp ($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 15px;
+    }
+    @include resp ($xxl) {
+      grid-gap: 20px;
+    }
+    .prison-card {
+      grid-row: span 1;
+      grid-column: span 1;
+      border-radius: 5px;
+      background-color: transparent;
+      padding: 15px;
+      background-color: lighten($secoundary, $amount: 85);
+      box-shadow: 1px 1px 1px  #bcbcbc9c;
+      border: 1px solid #cbcbcb87;
+      transition: box-shadow 0.25s ease-in-out;
+      cursor: pointer;
+      @include resp ($md) {
+        padding: 20px;
+      }
+
+      &:hover {
+        box-shadow: 1px 1px 8px #bcbcbc9c
+      }
+      a{ 
+        text-decoration: none;
+        color: $primary;
+      }
+      br {
+        margin-bottom: 10px;
+      }
+    }
+}
