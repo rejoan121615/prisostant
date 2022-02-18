@@ -9,71 +9,25 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style the header */
-
-.header {
-    background-color: #ddd;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    margin: 0 auto;
-}
-
 /* Style the footer */
-
-.footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196f3;
-    padding: 10px;
-    width: 100%;
-    align-self: center;
-}
-
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 2px;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.prison-details-grid {
-    width: 50%;
-    margin: 0 auto;
-}
 
 .grid-details-container {
     display: grid;
     grid-template-columns: 40% 60%;
 }
 
-.grid-item-name {
-    border: 1px solid black;
-    text-align: right;
-    padding-right: 0.2em;
-}
+.prisonstan_help {
+    @extend .container;
 
-.grid-item-value {
-    border: 1px solid black;
-    text-align: left;
-    padding-left: 0.2em;
+    h2 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
 }
-
-// .list-of-prisons {
-//     border: 1px solid black;
-//     margin: 0 auto;
-//     width: 60%;
-//     height: 100%;
-//     background-color: cornflowerblue;
-// }
 
 .prison-card {
     background-color: lightgray;
@@ -81,8 +35,6 @@ body {
 }
 
 .advert {
-    margin: 0 auto;
-    width: 50%;
     height: 100px;
     background-color: cornflowerblue;
     color: white;
@@ -115,12 +67,8 @@ $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
 
-
 $primary: #f49636;
 $secoundary: #1d1d1b;
-
-
-
 
 $containerWidth: (
     576: 540px,
@@ -148,6 +96,51 @@ $containerWidth: (
 }
 
 // common style
+a {
+    color: $primary;
+}
+
+h1 {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+a {
+    position: relative;
+    &:hover::before {
+        position: absolute;
+        content: "click here";
+        background-color: #d3d3d3;
+        border: 1px solid $secoundary;
+        padding: 8px 10px;
+        border-radius: 4px;
+        left: -10px;
+        top: -45px;
+        color: white;
+        text-transform: capitalize;
+        font-size: 0.85rem;
+        width: 85px;
+        text-align: center;
+    }
+}
+
+ul {
+    margin-top: 10px;
+    list-style: number;
+    margin-left: 22px;
+    li {
+        margin-bottom: 4px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
 .container {
     width: 100%;
     padding-left: 15px;
@@ -168,8 +161,15 @@ $containerWidth: (
 .header {
     @include padY(15px, 25px);
     background-color: #f3f3f3;
+    margin-bottom: 50px;
+    @include resp($md) {
+        margin-bottom: 75px;
+    }
     @include resp($lg) {
         @include padY(20px, 28px);
+    }
+    @include resp($xxl) {
+        margin-bottom: 100px;
     }
     img {
         width: 165px;
@@ -185,6 +185,7 @@ $containerWidth: (
     }
 
     .container {
+        text-align: center;
         @include resp($md) {
             display: flex;
             flex-flow: row wrap;
@@ -268,12 +269,133 @@ $containerWidth: (
     }
 }
 
-// title style 
-#section_state_details {
-  
+// breadcrumb
+#breadcrumbs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @extend .container;
+    a {
+        text-decoration: none;
+        font-weight: 500;
+        color: blue;
+    }
+    br {
+        display: none;
+    }
 }
 
+// advertisement
+.advert {
+    @extend .container;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    @include resp($xl) {
+        margin-bottom: 40px;
+    }
+}
 
+// section state intro
+#section_state_introduction,
+#section_prison_introduction {
+    @extend .container;
+    margin-bottom: 25px;
+    text-align: center;
+    h1,
+    h2,
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+#section_prison_introduction {
+    h2 {
+        margin-top: 25px;
+    }
+}
+
+// section details
+#section_state_details {
+    @extend .container;
+    margin-bottom: 15px;
+    @include resp($md) {
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    p {
+        margin-bottom: 8px;
+    }
+    #addressblocktable {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        .grid-item-name {
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+}
+
+// prison style
+#types_of_prisons,
+.grid-container {
+    @extend .container;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #e7e7e7;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 40px;
+    @include resp($md) {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 50px;
+    }
+    @include resp($lg) {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 15px;
+    }
+    .grid-item {
+        border: 1px solid black;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        text-align: center;
+        @include padY(10px, 10px);
+        @include resp($md) {
+            grid-column: span 1;
+        }
+        @include resp($lg) {
+            @include padY(15px, 15px);
+        }
+        &:last-child {
+            @include resp($lg) {
+                grid-column: span 1;
+            }
+        }
+        a {
+            color: $primary;
+            font-weight: 400;
+        }
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            @include resp($md) {
+                border-radius: 0px;
+            }
+        }
+        &:last-child {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            @include resp($md) {
+                border-radius: 0px;
+            }
+        }
+    }
+}
 
 // card style list
 
@@ -282,37 +404,175 @@ $containerWidth: (
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 15px;
-    @include resp ($lg) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 15px;
+    @include resp($lg) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 15px;
     }
-    @include resp ($xxl) {
-      grid-gap: 20px;
+    @include resp($xxl) {
+        grid-gap: 20px;
     }
     .prison-card {
-      grid-row: span 1;
-      grid-column: span 1;
-      border-radius: 5px;
-      background-color: transparent;
-      padding: 15px;
-      background-color: lighten($secoundary, $amount: 85);
-      box-shadow: 1px 1px 1px  #bcbcbc9c;
-      border: 1px solid #cbcbcb87;
-      transition: box-shadow 0.25s ease-in-out;
-      cursor: pointer;
-      @include resp ($md) {
-        padding: 20px;
-      }
+        grid-row: span 1;
+        grid-column: span 1;
+        border-radius: 5px;
+        background-color: transparent;
+        padding: 15px;
+        background-color: lighten($secoundary, $amount: 85);
+        box-shadow: 1px 1px 1px #bcbcbc9c;
+        border: 1px solid #cbcbcb87;
+        transition: box-shadow 0.25s ease-in-out;
+        cursor: pointer;
+        @include resp($md) {
+            padding: 20px;
+        }
 
-      &:hover {
-        box-shadow: 1px 1px 8px #bcbcbc9c
-      }
-      a{ 
-        text-decoration: none;
-        color: $primary;
-      }
-      br {
+        &:hover {
+            box-shadow: 1px 1px 8px #bcbcbc9c;
+        }
+        a {
+            text-decoration: none;
+            color: $primary;
+        }
+        br {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#section_prison_type_introduction {
+    @extend .container;
+}
+.city_jail_title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#nearest_prisons {
+    @extend .container;
+    ul {
+        list-style: none;
+        margin-top: 10px;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+#phonecalls {
+    @extend .container;
+    h2 {
+        margin-bottom: 8px;
+    }
+}
+
+#visitations {
+    h2 {
         margin-bottom: 10px;
-      }
+    }
+    p {
+        margin-bottom: 5px;
+    }
+    ul {
+        margin-top: 10px;
+        list-style: number;
+        margin-left: 22px;
+        li {
+            margin-bottom: 4px;
+        }
+    }
+    @extend .container;
+    padding: 10px;
+    // div style
+    & > div {
+        margin-top: 15px;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 3px;
+        @include resp($lg) {
+            padding: 15px;
+            border-radius: 5px;
+        }
+        @include resp($xxl) {
+            padding: 20px;
+            border-radius: 8px;
+        }
+    }
+
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+}
+
+// prison details
+#section_prison_details {
+    @extend .container;
+    .prison-details-grid {
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .grid-details-container {
+            margin-bottom: 5px;
+            .grid-item-name {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+#sending_packages {
+    @extend .container;
+}
+
+#sending_packages {
+    h2 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+// footer section
+.footer {
+    background-color: #777;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+    .container {
+        @include padY(20px, 20px);
+        display: flex;
+        flex-flow: column wrap;
+        @include resp($md) {
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        @include resp($lg) {
+            @include padY(25px, 25px);
+        }
+        a {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            @include resp($md) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            &:hover {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        div {
+            @include resp($md) {
+                margin-top: 10px;
+            }
+            @include resp($lg) {
+                margin-top: 0px;
+            }
+        }
     }
 }

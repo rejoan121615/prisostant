@@ -7,60 +7,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style the header */
-.header {
-  background-color: #ddd;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-  margin: 0 auto;
-}
-
 /* Style the footer */
-.footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196f3;
-  padding: 10px;
-  width: 100%;
-  align-self: center;
-}
-
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 2px;
-  font-size: 1rem;
-  text-align: center;
-}
-
-.prison-details-grid {
-  width: 50%;
-  margin: 0 auto;
-}
-
 .grid-details-container {
   display: grid;
   grid-template-columns: 40% 60%;
 }
 
-.grid-item-name {
-  border: 1px solid black;
-  text-align: right;
-  padding-right: 0.2em;
+.prisonstan_help h2 {
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
-
-.grid-item-value {
-  border: 1px solid black;
-  text-align: left;
-  padding-left: 0.2em;
+.prisonstan_help h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 .prison-card {
@@ -69,8 +28,6 @@ body {
 }
 
 .advert {
-  margin: 0 auto;
-  width: 50%;
   height: 100px;
   background-color: cornflowerblue;
   color: white;
@@ -94,7 +51,54 @@ body {
   box-sizing: border-box;
 }
 
-.container, .list-of-prisons {
+a {
+  color: #f49636;
+}
+
+h1 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+a {
+  position: relative;
+}
+a:hover::before {
+  position: absolute;
+  content: "click here";
+  background-color: #d3d3d3;
+  border: 1px solid #1d1d1b;
+  padding: 8px 10px;
+  border-radius: 4px;
+  left: -10px;
+  top: -45px;
+  color: white;
+  text-transform: capitalize;
+  font-size: 0.85rem;
+  width: 85px;
+  text-align: center;
+}
+
+ul {
+  margin-top: 10px;
+  list-style: number;
+  margin-left: 22px;
+}
+ul li {
+  margin-bottom: 4px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.container, #sending_packages, #section_prison_details, #visitations, #phonecalls, #nearest_prisons, #section_prison_type_introduction, .list-of-prisons, #types_of_prisons,
+.grid-container, #section_state_details, #section_state_introduction,
+#section_prison_introduction, .advert, #breadcrumbs, .prisonstan_help {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -102,33 +106,45 @@ body {
   margin-right: auto;
 }
 @media only screen and (min-width: 576px) {
-  .container, .list-of-prisons {
+  .container, #sending_packages, #section_prison_details, #visitations, #phonecalls, #nearest_prisons, #section_prison_type_introduction, .list-of-prisons, #types_of_prisons,
+.grid-container, #section_state_details, #section_state_introduction,
+#section_prison_introduction, .advert, #breadcrumbs, .prisonstan_help {
     padding-left: 0;
     padding-right: 0;
   }
 }
 @media only screen and (min-width: 576px) {
-  .container, .list-of-prisons {
+  .container, #sending_packages, #section_prison_details, #visitations, #phonecalls, #nearest_prisons, #section_prison_type_introduction, .list-of-prisons, #types_of_prisons,
+.grid-container, #section_state_details, #section_state_introduction,
+#section_prison_introduction, .advert, #breadcrumbs, .prisonstan_help {
     max-width: 540px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .container, .list-of-prisons {
+  .container, #sending_packages, #section_prison_details, #visitations, #phonecalls, #nearest_prisons, #section_prison_type_introduction, .list-of-prisons, #types_of_prisons,
+.grid-container, #section_state_details, #section_state_introduction,
+#section_prison_introduction, .advert, #breadcrumbs, .prisonstan_help {
     max-width: 720px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .container, .list-of-prisons {
+  .container, #sending_packages, #section_prison_details, #visitations, #phonecalls, #nearest_prisons, #section_prison_type_introduction, .list-of-prisons, #types_of_prisons,
+.grid-container, #section_state_details, #section_state_introduction,
+#section_prison_introduction, .advert, #breadcrumbs, .prisonstan_help {
     max-width: 960px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .container, .list-of-prisons {
+  .container, #sending_packages, #section_prison_details, #visitations, #phonecalls, #nearest_prisons, #section_prison_type_introduction, .list-of-prisons, #types_of_prisons,
+.grid-container, #section_state_details, #section_state_introduction,
+#section_prison_introduction, .advert, #breadcrumbs, .prisonstan_help {
     max-width: 1140px;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .container, .list-of-prisons {
+  .container, #sending_packages, #section_prison_details, #visitations, #phonecalls, #nearest_prisons, #section_prison_type_introduction, .list-of-prisons, #types_of_prisons,
+.grid-container, #section_state_details, #section_state_introduction,
+#section_prison_introduction, .advert, #breadcrumbs, .prisonstan_help {
     max-width: 1320px;
   }
 }
@@ -137,11 +153,22 @@ body {
   padding-top: 15px;
   padding-bottom: 25px;
   background-color: #f3f3f3;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    margin-bottom: 75px;
+  }
 }
 @media only screen and (min-width: 992px) {
   .header {
     padding-top: 20px;
     padding-bottom: 28px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .header {
+    margin-bottom: 100px;
   }
 }
 .header img {
@@ -162,57 +189,82 @@ body {
     width: 165px;
   }
 }
+.header .container, .header #sending_packages, .header #section_prison_details, .header #visitations, .header #phonecalls, .header #nearest_prisons, .header #section_prison_type_introduction, .header .list-of-prisons, .header #types_of_prisons,
+.header .grid-container, .header #section_state_details, .header #section_state_introduction,
+.header #section_prison_introduction, .header .advert, .header #breadcrumbs, .header .prisonstan_help {
+  text-align: center;
+}
 @media only screen and (min-width: 768px) {
-  .header .container, .header .list-of-prisons {
+  .header .container, .header #sending_packages, .header #section_prison_details, .header #visitations, .header #phonecalls, .header #nearest_prisons, .header #section_prison_type_introduction, .header .list-of-prisons, .header #types_of_prisons,
+.header .grid-container, .header #section_state_details, .header #section_state_introduction,
+.header #section_prison_introduction, .header .advert, .header #breadcrumbs, .header .prisonstan_help {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
   }
 }
-.header .container > div, .header .list-of-prisons > div {
+.header .container > div, .header #sending_packages > div, .header #section_prison_details > div, .header #visitations > div, .header #phonecalls > div, .header #nearest_prisons > div, .header #section_prison_type_introduction > div, .header .list-of-prisons > div, .header #types_of_prisons > div,
+.header .grid-container > div, .header #section_state_details > div, .header #section_state_introduction > div,
+.header #section_prison_introduction > div, .header .advert > div, .header #breadcrumbs > div, .header .prisonstan_help > div {
   margin-top: 20px;
 }
 @media only screen and (min-width: 768px) {
-  .header .container > div, .header .list-of-prisons > div {
+  .header .container > div, .header #sending_packages > div, .header #section_prison_details > div, .header #visitations > div, .header #phonecalls > div, .header #nearest_prisons > div, .header #section_prison_type_introduction > div, .header .list-of-prisons > div, .header #types_of_prisons > div,
+.header .grid-container > div, .header #section_state_details > div, .header #section_state_introduction > div,
+.header #section_prison_introduction > div, .header .advert > div, .header #breadcrumbs > div, .header .prisonstan_help > div {
     margin-top: 0px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .header .container > div, .header .list-of-prisons > div {
+  .header .container > div, .header #sending_packages > div, .header #section_prison_details > div, .header #visitations > div, .header #phonecalls > div, .header #nearest_prisons > div, .header #section_prison_type_introduction > div, .header .list-of-prisons > div, .header #types_of_prisons > div,
+.header .grid-container > div, .header #section_state_details > div, .header #section_state_introduction > div,
+.header #section_prison_introduction > div, .header .advert > div, .header #breadcrumbs > div, .header .prisonstan_help > div {
     width: 55%;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .header .container > div, .header .list-of-prisons > div {
+  .header .container > div, .header #sending_packages > div, .header #section_prison_details > div, .header #visitations > div, .header #phonecalls > div, .header #nearest_prisons > div, .header #section_prison_type_introduction > div, .header .list-of-prisons > div, .header #types_of_prisons > div,
+.header .grid-container > div, .header #section_state_details > div, .header #section_state_introduction > div,
+.header #section_prison_introduction > div, .header .advert > div, .header #breadcrumbs > div, .header .prisonstan_help > div {
     width: 50%;
   }
 }
-.header .container > div #search form, .header .list-of-prisons > div #search form {
+.header .container > div #search form, .header #sending_packages > div #search form, .header #section_prison_details > div #search form, .header #visitations > div #search form, .header #phonecalls > div #search form, .header #nearest_prisons > div #search form, .header #section_prison_type_introduction > div #search form, .header .list-of-prisons > div #search form, .header #types_of_prisons > div #search form,
+.header .grid-container > div #search form, .header #section_state_details > div #search form, .header #section_state_introduction > div #search form,
+.header #section_prison_introduction > div #search form, .header .advert > div #search form, .header #breadcrumbs > div #search form, .header .prisonstan_help > div #search form {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
 @media only screen and (min-width: 576px) {
-  .header .container > div #search form, .header .list-of-prisons > div #search form {
+  .header .container > div #search form, .header #sending_packages > div #search form, .header #section_prison_details > div #search form, .header #visitations > div #search form, .header #phonecalls > div #search form, .header #nearest_prisons > div #search form, .header #section_prison_type_introduction > div #search form, .header .list-of-prisons > div #search form, .header #types_of_prisons > div #search form,
+.header .grid-container > div #search form, .header #section_state_details > div #search form, .header #section_state_introduction > div #search form,
+.header #section_prison_introduction > div #search form, .header .advert > div #search form, .header #breadcrumbs > div #search form, .header .prisonstan_help > div #search form {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
 }
-.header .container > div #search form label, .header .list-of-prisons > div #search form label {
+.header .container > div #search form label, .header #sending_packages > div #search form label, .header #section_prison_details > div #search form label, .header #visitations > div #search form label, .header #phonecalls > div #search form label, .header #nearest_prisons > div #search form label, .header #section_prison_type_introduction > div #search form label, .header .list-of-prisons > div #search form label, .header #types_of_prisons > div #search form label,
+.header .grid-container > div #search form label, .header #section_state_details > div #search form label, .header #section_state_introduction > div #search form label,
+.header #section_prison_introduction > div #search form label, .header .advert > div #search form label, .header #breadcrumbs > div #search form label, .header .prisonstan_help > div #search form label {
   font-weight: 600;
   color: black;
   font-size: 1.5rem;
   margin-bottom: 5px;
 }
 @media only screen and (min-width: 576px) {
-  .header .container > div #search form label, .header .list-of-prisons > div #search form label {
+  .header .container > div #search form label, .header #sending_packages > div #search form label, .header #section_prison_details > div #search form label, .header #visitations > div #search form label, .header #phonecalls > div #search form label, .header #nearest_prisons > div #search form label, .header #section_prison_type_introduction > div #search form label, .header .list-of-prisons > div #search form label, .header #types_of_prisons > div #search form label,
+.header .grid-container > div #search form label, .header #section_state_details > div #search form label, .header #section_state_introduction > div #search form label,
+.header #section_prison_introduction > div #search form label, .header .advert > div #search form label, .header #breadcrumbs > div #search form label, .header .prisonstan_help > div #search form label {
     margin-bottom: 0px;
     font-size: 1rem;
   }
 }
-.header .container > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search] {
+.header .container > div #search form input[type=search], .header #sending_packages > div #search form input[type=search], .header #section_prison_details > div #search form input[type=search], .header #visitations > div #search form input[type=search], .header #phonecalls > div #search form input[type=search], .header #nearest_prisons > div #search form input[type=search], .header #section_prison_type_introduction > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search], .header #types_of_prisons > div #search form input[type=search],
+.header .grid-container > div #search form input[type=search], .header #section_state_details > div #search form input[type=search], .header #section_state_introduction > div #search form input[type=search],
+.header #section_prison_introduction > div #search form input[type=search], .header .advert > div #search form input[type=search], .header #breadcrumbs > div #search form input[type=search], .header .prisonstan_help > div #search form input[type=search] {
   padding: 10px 12px;
   border-radius: 4px;
   border: 1px solid #7a7a7a8a;
@@ -221,42 +273,206 @@ body {
   font-size: 0.85rem;
 }
 @media only screen and (min-width: 576px) {
-  .header .container > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search] {
+  .header .container > div #search form input[type=search], .header #sending_packages > div #search form input[type=search], .header #section_prison_details > div #search form input[type=search], .header #visitations > div #search form input[type=search], .header #phonecalls > div #search form input[type=search], .header #nearest_prisons > div #search form input[type=search], .header #section_prison_type_introduction > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search], .header #types_of_prisons > div #search form input[type=search],
+.header .grid-container > div #search form input[type=search], .header #section_state_details > div #search form input[type=search], .header #section_state_introduction > div #search form input[type=search],
+.header #section_prison_introduction > div #search form input[type=search], .header .advert > div #search form input[type=search], .header #breadcrumbs > div #search form input[type=search], .header .prisonstan_help > div #search form input[type=search] {
     margin: 0px 10px 0px 10px;
   }
 }
-.header .container > div #search form input[type=search]::placeholder, .header .list-of-prisons > div #search form input[type=search]::placeholder {
+.header .container > div #search form input[type=search]::placeholder, .header #sending_packages > div #search form input[type=search]::placeholder, .header #section_prison_details > div #search form input[type=search]::placeholder, .header #visitations > div #search form input[type=search]::placeholder, .header #phonecalls > div #search form input[type=search]::placeholder, .header #nearest_prisons > div #search form input[type=search]::placeholder, .header #section_prison_type_introduction > div #search form input[type=search]::placeholder, .header .list-of-prisons > div #search form input[type=search]::placeholder, .header #types_of_prisons > div #search form input[type=search]::placeholder,
+.header .grid-container > div #search form input[type=search]::placeholder, .header #section_state_details > div #search form input[type=search]::placeholder, .header #section_state_introduction > div #search form input[type=search]::placeholder,
+.header #section_prison_introduction > div #search form input[type=search]::placeholder, .header .advert > div #search form input[type=search]::placeholder, .header #breadcrumbs > div #search form input[type=search]::placeholder, .header .prisonstan_help > div #search form input[type=search]::placeholder {
   font-size: 0.85rem;
 }
 @media only screen and (min-width: 1200px) {
-  .header .container > div #search form input[type=search]::placeholder, .header .list-of-prisons > div #search form input[type=search]::placeholder {
+  .header .container > div #search form input[type=search]::placeholder, .header #sending_packages > div #search form input[type=search]::placeholder, .header #section_prison_details > div #search form input[type=search]::placeholder, .header #visitations > div #search form input[type=search]::placeholder, .header #phonecalls > div #search form input[type=search]::placeholder, .header #nearest_prisons > div #search form input[type=search]::placeholder, .header #section_prison_type_introduction > div #search form input[type=search]::placeholder, .header .list-of-prisons > div #search form input[type=search]::placeholder, .header #types_of_prisons > div #search form input[type=search]::placeholder,
+.header .grid-container > div #search form input[type=search]::placeholder, .header #section_state_details > div #search form input[type=search]::placeholder, .header #section_state_introduction > div #search form input[type=search]::placeholder,
+.header #section_prison_introduction > div #search form input[type=search]::placeholder, .header .advert > div #search form input[type=search]::placeholder, .header #breadcrumbs > div #search form input[type=search]::placeholder, .header .prisonstan_help > div #search form input[type=search]::placeholder {
     font-size: 1rem;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .header .container > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search] {
+  .header .container > div #search form input[type=search], .header #sending_packages > div #search form input[type=search], .header #section_prison_details > div #search form input[type=search], .header #visitations > div #search form input[type=search], .header #phonecalls > div #search form input[type=search], .header #nearest_prisons > div #search form input[type=search], .header #section_prison_type_introduction > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search], .header #types_of_prisons > div #search form input[type=search],
+.header .grid-container > div #search form input[type=search], .header #section_state_details > div #search form input[type=search], .header #section_state_introduction > div #search form input[type=search],
+.header #section_prison_introduction > div #search form input[type=search], .header .advert > div #search form input[type=search], .header #breadcrumbs > div #search form input[type=search], .header .prisonstan_help > div #search form input[type=search] {
     padding: 12px 15px;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .header .container > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search] {
+  .header .container > div #search form input[type=search], .header #sending_packages > div #search form input[type=search], .header #section_prison_details > div #search form input[type=search], .header #visitations > div #search form input[type=search], .header #phonecalls > div #search form input[type=search], .header #nearest_prisons > div #search form input[type=search], .header #section_prison_type_introduction > div #search form input[type=search], .header .list-of-prisons > div #search form input[type=search], .header #types_of_prisons > div #search form input[type=search],
+.header .grid-container > div #search form input[type=search], .header #section_state_details > div #search form input[type=search], .header #section_state_introduction > div #search form input[type=search],
+.header #section_prison_introduction > div #search form input[type=search], .header .advert > div #search form input[type=search], .header #breadcrumbs > div #search form input[type=search], .header .prisonstan_help > div #search form input[type=search] {
     margin: 0px 15px 0px 15px;
   }
 }
-.header .container > div #search form input[type=submit], .header .list-of-prisons > div #search form input[type=submit] {
+.header .container > div #search form input[type=submit], .header #sending_packages > div #search form input[type=submit], .header #section_prison_details > div #search form input[type=submit], .header #visitations > div #search form input[type=submit], .header #phonecalls > div #search form input[type=submit], .header #nearest_prisons > div #search form input[type=submit], .header #section_prison_type_introduction > div #search form input[type=submit], .header .list-of-prisons > div #search form input[type=submit], .header #types_of_prisons > div #search form input[type=submit],
+.header .grid-container > div #search form input[type=submit], .header #section_state_details > div #search form input[type=submit], .header #section_state_introduction > div #search form input[type=submit],
+.header #section_prison_introduction > div #search form input[type=submit], .header .advert > div #search form input[type=submit], .header #breadcrumbs > div #search form input[type=submit], .header .prisonstan_help > div #search form input[type=submit] {
   font-size: 1rem;
   display: inline-block;
   padding: 7px 12px;
   cursor: pointer;
 }
-.header .container > div #search form input[type=submit]:hover, .header .list-of-prisons > div #search form input[type=submit]:hover {
+.header .container > div #search form input[type=submit]:hover, .header #sending_packages > div #search form input[type=submit]:hover, .header #section_prison_details > div #search form input[type=submit]:hover, .header #visitations > div #search form input[type=submit]:hover, .header #phonecalls > div #search form input[type=submit]:hover, .header #nearest_prisons > div #search form input[type=submit]:hover, .header #section_prison_type_introduction > div #search form input[type=submit]:hover, .header .list-of-prisons > div #search form input[type=submit]:hover, .header #types_of_prisons > div #search form input[type=submit]:hover,
+.header .grid-container > div #search form input[type=submit]:hover, .header #section_state_details > div #search form input[type=submit]:hover, .header #section_state_introduction > div #search form input[type=submit]:hover,
+.header #section_prison_introduction > div #search form input[type=submit]:hover, .header .advert > div #search form input[type=submit]:hover, .header #breadcrumbs > div #search form input[type=submit]:hover, .header .prisonstan_help > div #search form input[type=submit]:hover {
   color: white;
   background-color: black;
   border-color: transparent;
 }
 @media only screen and (min-width: 1200px) {
-  .header .container > div #search form input[type=submit], .header .list-of-prisons > div #search form input[type=submit] {
+  .header .container > div #search form input[type=submit], .header #sending_packages > div #search form input[type=submit], .header #section_prison_details > div #search form input[type=submit], .header #visitations > div #search form input[type=submit], .header #phonecalls > div #search form input[type=submit], .header #nearest_prisons > div #search form input[type=submit], .header #section_prison_type_introduction > div #search form input[type=submit], .header .list-of-prisons > div #search form input[type=submit], .header #types_of_prisons > div #search form input[type=submit],
+.header .grid-container > div #search form input[type=submit], .header #section_state_details > div #search form input[type=submit], .header #section_state_introduction > div #search form input[type=submit],
+.header #section_prison_introduction > div #search form input[type=submit], .header .advert > div #search form input[type=submit], .header #breadcrumbs > div #search form input[type=submit], .header .prisonstan_help > div #search form input[type=submit] {
     padding: 10px 15px;
+  }
+}
+
+#breadcrumbs {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#breadcrumbs a {
+  text-decoration: none;
+  font-weight: 500;
+  color: blue;
+}
+#breadcrumbs br {
+  display: none;
+}
+
+.advert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1200px) {
+  .advert {
+    margin-bottom: 40px;
+  }
+}
+
+#section_state_introduction,
+#section_prison_introduction {
+  margin-bottom: 25px;
+  text-align: center;
+}
+#section_state_introduction h1,
+#section_state_introduction h2,
+#section_state_introduction p,
+#section_prison_introduction h1,
+#section_prison_introduction h2,
+#section_prison_introduction p {
+  margin-bottom: 10px;
+}
+
+#section_prison_introduction h2 {
+  margin-top: 25px;
+}
+
+#section_state_details {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  #section_state_details {
+    margin-bottom: 20px;
+  }
+}
+#section_state_details h2 {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+#section_state_details p {
+  margin-bottom: 8px;
+}
+#section_state_details #addressblocktable {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+#section_state_details #addressblocktable .grid-item-name {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#types_of_prisons,
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #e7e7e7;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  #types_of_prisons,
+.grid-container {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #types_of_prisons,
+.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 15px;
+  }
+}
+#types_of_prisons .grid-item,
+.grid-container .grid-item {
+  border: 1px solid black;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media only screen and (min-width: 768px) {
+  #types_of_prisons .grid-item,
+.grid-container .grid-item {
+    grid-column: span 1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #types_of_prisons .grid-item,
+.grid-container .grid-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #types_of_prisons .grid-item:last-child,
+.grid-container .grid-item:last-child {
+    grid-column: span 1;
+  }
+}
+#types_of_prisons .grid-item a,
+.grid-container .grid-item a {
+  color: #f49636;
+  font-weight: 400;
+}
+#types_of_prisons .grid-item:first-child,
+.grid-container .grid-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+@media only screen and (min-width: 768px) {
+  #types_of_prisons .grid-item:first-child,
+.grid-container .grid-item:first-child {
+    border-radius: 0px;
+  }
+}
+#types_of_prisons .grid-item:last-child,
+.grid-container .grid-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+@media only screen and (min-width: 768px) {
+  #types_of_prisons .grid-item:last-child,
+.grid-container .grid-item:last-child {
+    border-radius: 0px;
   }
 }
 
@@ -302,6 +518,147 @@ body {
 }
 .list-of-prisons .prison-card br {
   margin-bottom: 10px;
+}
+
+.city_jail_title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#nearest_prisons ul {
+  list-style: none;
+  margin-top: 10px;
+}
+#nearest_prisons ul li {
+  margin-bottom: 5px;
+}
+
+#phonecalls h2 {
+  margin-bottom: 8px;
+}
+
+#visitations {
+  padding: 10px;
+}
+#visitations h2 {
+  margin-bottom: 10px;
+}
+#visitations p {
+  margin-bottom: 5px;
+}
+#visitations ul {
+  margin-top: 10px;
+  list-style: number;
+  margin-left: 22px;
+}
+#visitations ul li {
+  margin-bottom: 4px;
+}
+#visitations > div {
+  margin-top: 15px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 3px;
+}
+@media only screen and (min-width: 992px) {
+  #visitations > div {
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #visitations > div {
+    padding: 20px;
+    border-radius: 8px;
+  }
+}
+#visitations h3 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+#section_prison_details .prison-details-grid h2 {
+  margin-bottom: 10px;
+}
+#section_prison_details .prison-details-grid p {
+  margin-bottom: 10px;
+}
+#section_prison_details .prison-details-grid .grid-details-container {
+  margin-bottom: 5px;
+}
+#section_prison_details .prison-details-grid .grid-details-container .grid-item-name {
+  font-weight: bold;
+}
+
+#sending_packages h2 {
+  margin-bottom: 10px;
+}
+#sending_packages p {
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #777;
+  text-align: center;
+  color: white;
+  margin-top: 70px;
+}
+.footer .container, .footer .prisonstan_help, .footer #breadcrumbs, .footer .advert, .footer #section_state_introduction,
+.footer #section_prison_introduction, .footer #section_state_details, .footer #types_of_prisons,
+.footer .grid-container, .footer .list-of-prisons, .footer #section_prison_type_introduction, .footer #nearest_prisons, .footer #phonecalls, .footer #visitations, .footer #section_prison_details, .footer #sending_packages {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: column wrap;
+}
+@media only screen and (min-width: 768px) {
+  .footer .container, .footer .prisonstan_help, .footer #breadcrumbs, .footer .advert, .footer #section_state_introduction,
+.footer #section_prison_introduction, .footer #section_state_details, .footer #types_of_prisons,
+.footer .grid-container, .footer .list-of-prisons, .footer #section_prison_type_introduction, .footer #nearest_prisons, .footer #phonecalls, .footer #visitations, .footer #section_prison_details, .footer #sending_packages {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer .container, .footer .prisonstan_help, .footer #breadcrumbs, .footer .advert, .footer #section_state_introduction,
+.footer #section_prison_introduction, .footer #section_state_details, .footer #types_of_prisons,
+.footer .grid-container, .footer .list-of-prisons, .footer #section_prison_type_introduction, .footer #nearest_prisons, .footer #phonecalls, .footer #visitations, .footer #section_prison_details, .footer #sending_packages {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+.footer .container a, .footer .prisonstan_help a, .footer #breadcrumbs a, .footer .advert a, .footer #section_state_introduction a,
+.footer #section_prison_introduction a, .footer #section_state_details a, .footer #types_of_prisons a,
+.footer .grid-container a, .footer .list-of-prisons a, .footer #section_prison_type_introduction a, .footer #nearest_prisons a, .footer #phonecalls a, .footer #visitations a, .footer #section_prison_details a, .footer #sending_packages a {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .footer .container a, .footer .prisonstan_help a, .footer #breadcrumbs a, .footer .advert a, .footer #section_state_introduction a,
+.footer #section_prison_introduction a, .footer #section_state_details a, .footer #types_of_prisons a,
+.footer .grid-container a, .footer .list-of-prisons a, .footer #section_prison_type_introduction a, .footer #nearest_prisons a, .footer #phonecalls a, .footer #visitations a, .footer #section_prison_details a, .footer #sending_packages a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+.footer .container a:hover::before, .footer .prisonstan_help a:hover::before, .footer #breadcrumbs a:hover::before, .footer .advert a:hover::before, .footer #section_state_introduction a:hover::before,
+.footer #section_prison_introduction a:hover::before, .footer #section_state_details a:hover::before, .footer #types_of_prisons a:hover::before,
+.footer .grid-container a:hover::before, .footer .list-of-prisons a:hover::before, .footer #section_prison_type_introduction a:hover::before, .footer #nearest_prisons a:hover::before, .footer #phonecalls a:hover::before, .footer #visitations a:hover::before, .footer #section_prison_details a:hover::before, .footer #sending_packages a:hover::before {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .footer .container div, .footer .prisonstan_help div, .footer #breadcrumbs div, .footer .advert div, .footer #section_state_introduction div,
+.footer #section_prison_introduction div, .footer #section_state_details div, .footer #types_of_prisons div,
+.footer .grid-container div, .footer .list-of-prisons div, .footer #section_prison_type_introduction div, .footer #nearest_prisons div, .footer #phonecalls div, .footer #visitations div, .footer #section_prison_details div, .footer #sending_packages div {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer .container div, .footer .prisonstan_help div, .footer #breadcrumbs div, .footer .advert div, .footer #section_state_introduction div,
+.footer #section_prison_introduction div, .footer #section_state_details div, .footer #types_of_prisons div,
+.footer .grid-container div, .footer .list-of-prisons div, .footer #section_prison_type_introduction div, .footer #nearest_prisons div, .footer #phonecalls div, .footer #visitations div, .footer #section_prison_details div, .footer #sending_packages div {
+    margin-top: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
